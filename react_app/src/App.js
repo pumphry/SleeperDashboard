@@ -50,7 +50,7 @@ function App() {
         <QueryClientProvider client={queryClient}>
           {/* The rest of your application */}
           { showUserInfoForm && <SleeperInfoForm onUserNameUpdate={handleUserNameUpdate} onLeagueNameUpdate={handleLeagueNameUpdate} /> }
-          { showReportInfo && <LeagueReport />}
+          { showReportInfo && <LeagueReport userName={userName} />}
           <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
       </header>
